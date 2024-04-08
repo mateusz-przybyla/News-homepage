@@ -3,12 +3,28 @@
 * {
   margin: 0;
   padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  background-color: $off-white;
   font-family: $ff-Inter;
+}
+
+.opacity {
+  opacity: 0.3;
+}
+
+.text {
+  font-size: 15px;
+  color: $dark-grayish-blue;
+  font-weight: 500;
 }
 
 .header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   background-color: $off-white;
   margin-left: 5%;
   margin-right: 5%;
@@ -17,8 +33,6 @@
   &__logo {
     .logo__img {
       height: 30px;
-      position: relative;
-      top: 25px;
     }
   }
 
@@ -28,35 +42,42 @@
     &.open {
       display: flex;
       flex-direction: column;
+      background-color: $off-white;
       width: 0;
       height: 100%;
       position: fixed;
       top: 0;
       right: 0;
-      z-index: 1;
-      background-color: black;
+      z-index: 998;
       overflow-x: hidden;
       transition: 0.5s;
-      padding-top: 60px;
+      padding-top: 140px;
     }
 
     .subnav__subpage {
-      padding: 8px 8px 8px 32px;
+      padding: 12px 0 12px 25px;
+      color: $black;
+      font-size: 18px;
       text-decoration: none;
-      font-size: 20px;
-      color: #818181;
       transition: 0.3s;
     }
 
     .subnav__close-btn {
+      background-image: url("../assets/images/icon-menu-close.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-color: $off-white;
+      width: 40px;
+      height: 40px;
       position: absolute;
-      top: 0;
+      top: 25px;
       right: 25px;
-      font-size: 36px;
+      border: 0;
+      cursor: pointer;
     }
 
     .subnav__subpage:hover {
-      color: #f1f1f1;
+      color: $soft-red;
     }
   }
 
@@ -68,7 +89,8 @@
       background-image: url("../assets/images/icon-menu.svg");
       background-repeat: no-repeat;
       background-position: center;
-      background-color: white;
+      background-color: $off-white;
+      height: 40px;
       width: 40px;
       border: none;
       cursor: pointer;
@@ -137,8 +159,8 @@
 
 @media (min-width: 600px) {
   .header {
-    margin-left: 12%;
-    margin-right: 12%;
+    margin-left: 6%;
+    margin-right: 6%;
 
     &__subnav {
       display: flex;
@@ -147,9 +169,10 @@
       align-items: center;
 
       .subnav__subpage {
-        padding: 0 0 0 10px;
+        padding: 0 0 0 20px;
         text-decoration: none;
-        font-size: 12px;
+        color: $dark-grayish-blue;
+        font-size: 16px;
       }
 
       .subnav__close-btn {
@@ -163,8 +186,8 @@
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 0.5fr;
     gap: 5px;
-    margin-left: 12%;
-    margin-right: 12%;
+    margin-left: 6%;
+    margin-right: 6%;
 
     &__a {
       background-color: blue;
@@ -207,5 +230,23 @@
       background-color: brown;
       order: 7;
     }
+  }
+}
+
+@media (min-width: 1000px) {
+  .header {
+    margin-left: 12%;
+    margin-right: 12%;
+
+    &__subnav {
+      .subnav__subpage {
+        padding: 0 0 0 40px;
+      }
+    }
+  }
+
+  .main {
+    margin-left: 12%;
+    margin-right: 12%;
   }
 }
