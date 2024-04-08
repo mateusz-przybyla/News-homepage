@@ -11,12 +11,16 @@
 .header {
   display: flex;
   justify-content: space-between;
+  background-color: #fffdfa;
   margin-left: 5%;
   margin-right: 5%;
+  height: 85px;
 }
 
 .header__logo .logo__img {
-  height: 22px;
+  height: 30px;
+  position: relative;
+  top: 25px;
 }
 
 .header__subnav {
@@ -27,11 +31,11 @@
   display: flex;
   flex-direction: column;
   width: 0;
-  position: fixed;
-  z-index: 1;
   height: 100%;
+  position: fixed;
   top: 0;
   right: 0;
+  z-index: 1;
   background-color: black;
   overflow-x: hidden;
   transition: 0.5s;
@@ -63,16 +67,13 @@
 
 .header__open-btn.open {
   display: block;
-  font-size: 20px;
-  cursor: pointer;
-  background-color: #111;
-  color: white;
-  padding: 10px 15px;
+  background-image: url("../assets/images/icon-menu.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: white;
+  width: 40px;
   border: none;
-}
-
-.header__open-btn.open:hover {
-  background-color: #444;
+  cursor: pointer;
 }
 
 .main {

@@ -1,6 +1,8 @@
 var openButton = document.querySelector(".header__open-btn");
 var closeButton = document.querySelector(".subnav__close-btn");
 
+window.onload = changeMenu;
+
 openButton.addEventListener("click", function () {
   document.querySelector(".header__subnav").style.width = "70%";
 });
