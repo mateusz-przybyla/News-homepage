@@ -5,12 +5,22 @@
 * {
   margin: 0;
   padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #fffdfa;
   font-family: "Inter", sans-serif;
+}
+
+.opacity {
+  opacity: 0.3;
 }
 
 .header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   background-color: #fffdfa;
   margin-left: 5%;
   margin-right: 5%;
@@ -19,8 +29,6 @@
 
 .header__logo .logo__img {
   height: 30px;
-  position: relative;
-  top: 25px;
 }
 
 .header__subnav {
@@ -30,35 +38,43 @@
 .header__subnav.open {
   display: flex;
   flex-direction: column;
+  background-color: #fffdfa;
   width: 0;
   height: 100%;
   position: fixed;
   top: 0;
   right: 0;
-  z-index: 1;
-  background-color: black;
+  z-index: 998;
   overflow-x: hidden;
   transition: 0.5s;
-  padding-top: 60px;
+  padding-top: 140px;
 }
 
 .header__subnav .subnav__subpage {
-  padding: 8px 8px 8px 32px;
+  padding: 12px 0 12px 25px;
   text-decoration: none;
-  font-size: 20px;
-  color: #818181;
+  font-size: 18px;
+  font-weight: 500;
+  color: #00001a;
   transition: 0.3s;
 }
 
 .header__subnav .subnav__close-btn {
+  background-image: url("../assets/images/icon-menu-close.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #fffdfa;
+  width: 40px;
+  height: 40px;
   position: absolute;
-  top: 0;
+  top: 25px;
   right: 25px;
-  font-size: 36px;
+  border: 0;
+  cursor: pointer;
 }
 
 .header__subnav .subnav__subpage:hover {
-  color: #f1f1f1;
+  color: #c5c6ce;
 }
 
 .header__open-btn {
@@ -70,7 +86,8 @@
   background-image: url("../assets/images/icon-menu.svg");
   background-repeat: no-repeat;
   background-position: center;
-  background-color: white;
+  background-color: #fffdfa;
+  height: 40px;
   width: 40px;
   border: none;
   cursor: pointer;

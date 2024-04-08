@@ -5,10 +5,14 @@ window.onload = changeMenu;
 
 openButton.addEventListener("click", function () {
   document.querySelector(".header__subnav").style.width = "70%";
+  document.querySelector(".main").classList.add("opacity");
+  document.querySelector(".header__logo").classList.add("opacity");
 });
 
 closeButton.addEventListener("click", function () {
   document.querySelector(".header__subnav").style.width = "0%";
+  document.querySelector(".main").classList.remove("opacity");
+  document.querySelector(".header__logo").classList.remove("opacity");
 });
 
 window.addEventListener("resize", () => changeMenu());
