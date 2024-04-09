@@ -19,6 +19,7 @@ body {
   font-size: 15px;
   color: $dark-grayish-blue;
   font-weight: 500;
+  line-height: 1.6;
 }
 
 .heading {
@@ -29,6 +30,11 @@ body {
     font-size: 40px;
     line-height: 1;
   }
+}
+
+.btn {
+  border: 0;
+  cursor: pointer;
 }
 
 .header {
@@ -82,8 +88,6 @@ body {
       position: absolute;
       top: 25px;
       right: 25px;
-      border: 0;
-      cursor: pointer;
     }
 
     .subnav__subpage:hover {
@@ -102,8 +106,6 @@ body {
       background-color: $off-white;
       height: 40px;
       width: 40px;
-      border: none;
-      cursor: pointer;
     }
   }
 }
@@ -118,41 +120,54 @@ body {
     background-image: url("../assets/images/image-web-3-mobile.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    height: 300px;
+    min-height: 300px;
   }
 
   &__b {
     background-color: red;
-    height: 150px;
+    min-height: 150px;
+    display: flex;
+    align-items: center;
   }
 
   &__c {
-    background-color: green;
-    height: 200px;
-    margin-bottom: 5px;
+    background-color: burlywood;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .c__btn {
+      background-color: $soft-red;
+      padding: 15px 30px 15px 30px;
+      width: fit-content;
+      margin-top: 20px;
+      font-size: 14px;
+      font-weight: 600;
+      color: $off-white;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+    }
   }
 
   &__d {
-    background-color: yellow;
-    height: 200px;
-    margin-bottom: 5px;
+    background-color: $very-dark-blue;
+    min-height: 200px;
   }
 
   &__e {
     background-color: purple;
-    height: 100px;
-    margin-bottom: 5px;
+    min-height: 100px;
   }
 
   &__f {
     background-color: orange;
-    height: 100px;
-    margin-bottom: 5px;
+    min-height: 100px;
   }
 
   &__g {
     background-color: brown;
-    height: 100px;
+    min-height: 100px;
   }
 }
 
@@ -203,46 +218,46 @@ body {
 
   .main {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 0.5fr;
-    gap: 5px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 0.75fr 0.5fr;
     margin-left: 6%;
     margin-right: 6%;
 
     &__a {
       background-image: url("../assets/images/image-web-3-desktop.jpg");
-      grid-column: span 2;
       order: 1;
     }
 
     &__b {
       background-color: red;
       order: 3;
+      min-height: 200px;
+      align-items: start;
+      padding-top: 35px;
     }
 
     &__c {
-      background-color: green;
-      margin-bottom: 0;
+      background-color: burlywood;
       order: 4;
+      min-height: 200px;
+      justify-content: space-evenly;
+      padding-top: 10px;
     }
 
     &__d {
       background-color: yellow;
-      height: auto;
-      margin-bottom: 0;
       order: 2;
       grid-row: span 2;
+      min-height: 200px;
     }
 
     &__e {
       background-color: purple;
-      margin-bottom: 0;
       order: 5;
     }
 
     &__f {
       background-color: orange;
-      margin-bottom: 0;
       order: 6;
     }
 
@@ -254,6 +269,12 @@ body {
 }
 
 @media (min-width: 800px) {
+  .heading {
+    &--lg {
+      font-size: 45px;
+    }
+  }
+
   .header {
     margin-left: 9%;
     margin-right: 9%;
@@ -266,12 +287,65 @@ body {
   }
 
   .main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 0.75fr 0.5fr;
     margin-left: 9%;
     margin-right: 9%;
+
+    &__a {
+      background-image: url("../assets/images/image-web-3-desktop.jpg");
+      grid-column: span 2;
+      order: 1;
+    }
+
+    &__b {
+      background-color: red;
+      order: 3;
+      min-height: 200px;
+      align-items: start;
+      padding-top: 35px;
+    }
+
+    &__c {
+      background-color: burlywood;
+      order: 4;
+      min-height: 200px;
+      justify-content: space-evenly;
+      padding-top: 10px;
+    }
+
+    &__d {
+      background-color: yellow;
+      order: 2;
+      grid-row: span 2;
+      min-height: 200px;
+    }
+
+    &__e {
+      background-color: purple;
+      order: 5;
+    }
+
+    &__f {
+      background-color: orange;
+      order: 6;
+    }
+
+    &__g {
+      background-color: brown;
+      order: 7;
+    }
   }
 }
 
 @media (min-width: 1000px) {
+  .heading {
+    &--lg {
+      font-size: 55px;
+    }
+  }
+
   .header {
     margin-left: 12%;
     margin-right: 12%;

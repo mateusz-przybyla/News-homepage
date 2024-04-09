@@ -21,6 +21,7 @@ body {
   font-size: 15px;
   color: #5d5f79;
   font-weight: 500;
+  line-height: 1.6;
 }
 
 .heading {
@@ -31,6 +32,11 @@ body {
 .heading--lg {
   font-size: 40px;
   line-height: 1;
+}
+
+.btn {
+  border: 0;
+  cursor: pointer;
 }
 
 .header {
@@ -84,8 +90,6 @@ body {
   position: absolute;
   top: 25px;
   right: 25px;
-  border: 0;
-  cursor: pointer;
 }
 
 .header__subnav .subnav__subpage:hover {
@@ -104,8 +108,6 @@ body {
   background-color: #fffdfa;
   height: 40px;
   width: 40px;
-  border: none;
-  cursor: pointer;
 }
 
 .main {
@@ -119,41 +121,54 @@ body {
   background-image: url("../assets/images/image-web-3-mobile.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  height: 300px;
+  min-height: 300px;
 }
 
 .main__b {
   background-color: red;
-  height: 150px;
+  min-height: 150px;
+  display: flex;
+  align-items: center;
 }
 
 .main__c {
-  background-color: green;
-  height: 200px;
-  margin-bottom: 5px;
+  background-color: burlywood;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.main__c .c__btn {
+  background-color: #f15e50;
+  padding: 15px 30px 15px 30px;
+  width: fit-content;
+  margin-top: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #fffdfa;
+  letter-spacing: 4px;
+  text-transform: uppercase;
 }
 
 .main__d {
-  background-color: yellow;
-  height: 200px;
-  margin-bottom: 5px;
+  background-color: #00001a;
+  min-height: 200px;
 }
 
 .main__e {
   background-color: purple;
-  height: 100px;
-  margin-bottom: 5px;
+  min-height: 100px;
 }
 
 .main__f {
   background-color: orange;
-  height: 100px;
-  margin-bottom: 5px;
+  min-height: 100px;
 }
 
 .main__g {
   background-color: brown;
-  height: 100px;
+  min-height: 100px;
 }
 
 .attribution {
@@ -194,41 +209,41 @@ body {
   }
   .main {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 0.5fr;
-    gap: 5px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 0.75fr 0.5fr;
     margin-left: 6%;
     margin-right: 6%;
   }
   .main__a {
     background-image: url("../assets/images/image-web-3-desktop.jpg");
-    grid-column: span 2;
     order: 1;
   }
   .main__b {
     background-color: red;
     order: 3;
+    min-height: 200px;
+    align-items: start;
+    padding-top: 35px;
   }
   .main__c {
-    background-color: green;
-    margin-bottom: 0;
+    background-color: burlywood;
     order: 4;
+    min-height: 200px;
+    justify-content: space-evenly;
+    padding-top: 10px;
   }
   .main__d {
     background-color: yellow;
-    height: auto;
-    margin-bottom: 0;
     order: 2;
     grid-row: span 2;
+    min-height: 200px;
   }
   .main__e {
     background-color: purple;
-    margin-bottom: 0;
     order: 5;
   }
   .main__f {
     background-color: orange;
-    margin-bottom: 0;
     order: 6;
   }
   .main__g {
@@ -238,6 +253,9 @@ body {
 }
 
 @media (min-width: 800px) {
+  .heading--lg {
+    font-size: 45px;
+  }
   .header {
     margin-left: 9%;
     margin-right: 9%;
@@ -246,12 +264,55 @@ body {
     padding: 0 0 0 30px;
   }
   .main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 0.75fr 0.5fr;
     margin-left: 9%;
     margin-right: 9%;
+  }
+  .main__a {
+    background-image: url("../assets/images/image-web-3-desktop.jpg");
+    grid-column: span 2;
+    order: 1;
+  }
+  .main__b {
+    background-color: red;
+    order: 3;
+    min-height: 200px;
+    align-items: start;
+    padding-top: 35px;
+  }
+  .main__c {
+    background-color: burlywood;
+    order: 4;
+    min-height: 200px;
+    justify-content: space-evenly;
+    padding-top: 10px;
+  }
+  .main__d {
+    background-color: yellow;
+    order: 2;
+    grid-row: span 2;
+    min-height: 200px;
+  }
+  .main__e {
+    background-color: purple;
+    order: 5;
+  }
+  .main__f {
+    background-color: orange;
+    order: 6;
+  }
+  .main__g {
+    background-color: brown;
+    order: 7;
   }
 }
 
 @media (min-width: 1000px) {
+  .heading--lg {
+    font-size: 55px;
+  }
   .header {
     margin-left: 12%;
     margin-right: 12%;
