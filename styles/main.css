@@ -71,13 +71,6 @@ hr {
   justify-content: space-between;
   align-items: center;
   background-color: #fffdfa;
-  margin-left: 5%;
-  margin-right: 5%;
-  height: 85px;
-}
-
-.header__logo .logo__img {
-  height: 30px;
 }
 
 .header__subnav {
@@ -255,6 +248,14 @@ hr {
 
 /*MEDIA QUERIES*/
 @media (min-width: 0px) {
+  .header {
+    margin-left: 5%;
+    margin-right: 5%;
+    height: 85px;
+  }
+  .header__logo .logo__img {
+    height: 30px;
+  }
   .main {
     margin-left: 5%;
     margin-right: 5%;
@@ -327,8 +328,6 @@ hr {
   .main__d {
     order: 2;
     grid-row: span 2;
-    min-height: 200px;
-    background-color: #00001a;
   }
   .main__e {
     order: 5;

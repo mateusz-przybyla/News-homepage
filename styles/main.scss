@@ -69,15 +69,6 @@ hr {
   justify-content: space-between;
   align-items: center;
   background-color: $off-white;
-  margin-left: 5%;
-  margin-right: 5%;
-  height: 85px;
-
-  &__logo {
-    .logo__img {
-      height: 30px;
-    }
-  }
 
   &__subnav {
     display: none;
@@ -252,6 +243,18 @@ hr {
 /*MEDIA QUERIES*/
 
 @media (min-width: 0px) {
+  .header {
+    margin-left: 5%;
+    margin-right: 5%;
+    height: 85px;
+
+    &__logo {
+      .logo__img {
+        height: 30px;
+      }
+    }
+  }
+
   .main {
     margin-left: 5%;
     margin-right: 5%;
@@ -338,8 +341,6 @@ hr {
     &__d {
       order: 2;
       grid-row: span 2;
-      min-height: 200px;
-      background-color: $very-dark-blue;
     }
 
     &__e {
